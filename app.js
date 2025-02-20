@@ -1,8 +1,8 @@
 const firstName = 'Nastya'
-const age = '28'
-const job = 'Designer'
-const city = 'Barcelona'
 console.log('firstName')
+const age = 28
 console.log('age')
+const job = 'Designer'
 console.log('job)
+const city = 'Barcelona'
 console.log('city')
