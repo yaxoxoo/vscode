@@ -1,7 +1,6 @@
 const screenPrice = 15000;
 const percentage = 20;
 
-
 const titleProject = prompt("What's the project name?");
 console.log("Project Name: " + titleProject);
 
@@ -30,7 +29,6 @@ const servicePercentPrice = Math.round(
   fullPrice - (fullPrice * percentage) / 100
 );
 console.log(`Total after ${percentage}% commission: $${servicePercentPrice}`);
-
 
 if (fullPrice > 50000) {
   console.log("We will give you a 10% discount.");
