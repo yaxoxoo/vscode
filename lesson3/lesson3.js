@@ -15,20 +15,23 @@ const servicePrice2 = Number(prompt("How much will this second service cost?"));
 
 const fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
-const servicePercentPrice = (fullPrice * percentage) / 100;
+const servicePercentPrice = Math.round(
+  fullPrice - (fullPrice * percentage) / 100
+);
+console.log(`Total after ${percentage}% commission: ${servicePercentPrice}`);
 
 if (fullPrice > 50000) {
-    console.log("We will give you a 10% discount.");
+  console.log("We will give you a 10% discount.");
 } else if (fullPrice >= 20000 && fullPrice <= 50000) {
-    console.log("We will give you a 5% discount.");
+  console.log("We will give you a 5% discount.");
 } else if (fullPrice > 0 && fullPrice < 20000) {
-    console.log("No discount available.");
+  console.log("No discount available.");
 } else if (fullPrice === 50000) {
-    console.log("Special offer coming soon.");
+  console.log("Special offer coming soon.");
 } else if (fullPrice === 20000) {
-    console.log("No additional discount.");
+  console.log("No additional discount.");
 } else if (fullPrice === 0) {
-    console.log("The total price is zero.");
+  console.log("The total price is zero.");
 } else {
-    console.log("Something went wrong.");
+  console.log("Something went wrong.");
 }
