@@ -18,13 +18,17 @@ const fullPrice = screenPrice + servicePrice1 + servicePrice2;
 const servicePercentPrice = (fullPrice * percentage) / 100;
 
 if (fullPrice > 50000) {
-  console.log("We will give you a 10% discount.");
-} else if (fullPrice > 20000 && fullPrice <= 50000) {
-  console.log("We will give you a 5% discount.");
-} else if (fullPrice > 0 && fullPrice <= 20000) {
-  console.log("No discount is provided.");
+    console.log("We will give you a 10% discount.");
+} else if (fullPrice >= 20000 && fullPrice <= 50000) {
+    console.log("We will give you a 5% discount.");
+} else if (fullPrice > 0 && fullPrice < 20000) {
+    console.log("No discount available.");
+} else if (fullPrice === 50000) {
+    console.log("Special offer coming soon.");
+} else if (fullPrice === 20000) {
+    console.log("No additional discount.");
 } else if (fullPrice === 0) {
-  console.log("The price is zero. Please check your input.");
+    console.log("The total price is zero.");
 } else {
-  console.log("Something went wrong.");
+    console.log("Something went wrong.");
 }
