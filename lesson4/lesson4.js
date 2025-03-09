@@ -67,19 +67,15 @@ let servicePercentPrice = getServicePercentPrices(fullPrice);
 newTitle = getTitle();
 
 if (fullPrice > 50000) {
-  console.log("We will give you a 10% discount.");
-} else if (fullPrice >= 20000 && fullPrice < 50000) {
-  console.log("We will give you a 5% discount.");
-} else if (fullPrice > 0 && fullPrice < 20000) {
-  console.log("No discount available.");
-} else if (fullPrice === 50000) {
-  console.log("Special offer coming soon.");
-} else if (fullPrice === 20000) {
-  console.log("No additional discount.");
+  console.log("10% discount");
+} else if (fullPrice >= 20000) {
+  console.log("5% discount");
+} else if (fullPrice > 0) {
+  console.log("No discount");
 } else if (fullPrice === 0) {
-  console.log("The total price is zero.");
+  console.log("Free");
 } else {
-  console.log("Something went wrong.");
+  console.log("Error: negative price");
 }
 
 console.log(titleProject);
